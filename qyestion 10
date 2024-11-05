@@ -1,0 +1,36 @@
+CODE
+#include<stdio.h>
+int main()
+{
+    int n,i,j,b;
+    printf("Enter the dimension of the array");
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+     {
+         printf("Enter%d element",i+1);
+         scanf("%d",&a[i]);
+     }
+    for(i=0;i<n;i++)
+     for(j=0;j<n-i-1;j++)
+       if(a[j]>a[j+1])
+        {
+            b=a[j];
+            a[j]=a[j+1];
+            a[j+1]=b;
+        }
+    for(i=0;i<n-1;i++)
+      if(a[i]==a[i+1])
+        printf("%d,",a[i]);
+    return 0;
+}
+OUTPUT
+Enter the dimension of the array7
+Enter1 element1
+Enter2 element2
+Enter3 element3
+Enter4 element6
+Enter5 element3
+Enter6 element6
+Enter7 element1
+1,3,6,
