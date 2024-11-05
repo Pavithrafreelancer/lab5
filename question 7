@@ -1,0 +1,35 @@
+CODE
+#include<stdio.h>
+int main()
+{
+    int i,k,n,b=0;
+    printf("Enter dimension of the array");
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+     {
+         printf("Enter%d element",i+1);
+         scanf("%d",&a[i]);
+     }
+      printf("k=");
+      scanf("%d",&k);
+     for(i=0;i<n;i++)
+      if(a[i]==k)
+       b++;
+      printf("Number %d is present %d times",k,b);
+      return 0;
+}
+OUTPUT
+Enter dimension of the array10
+Enter1 element1
+Enter2 element7
+Enter3 element3
+Enter4 element8
+Enter5 element1
+Enter6 element7
+Enter7 element7
+Enter8 element7
+Enter9 element6
+Enter10 element5
+k=7
+Number 7 is present 4 times
