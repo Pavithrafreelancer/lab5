@@ -1,0 +1,32 @@
+CODE
+#include<stdio.h>
+int main()
+{
+    int n,i,j,b=0;
+    printf("Enter the dimension of the array");
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+     {
+         printf("Enter%d element",i+1);
+         scanf("%d",&a[i]);
+     }
+    for(i=0;i<n & b==0;i++)
+      for(j=i+1;j<n & b==0;j++)
+        if(a[i]==a[j])
+         {
+             printf("%d is the first element that repeats",a[i]);
+             b++;
+         }
+    return 0;
+}
+OUTPUT
+Enter the dimension of the array7
+Enter1 element10
+Enter2 element5
+Enter3 element3
+Enter4 element4
+Enter5 element3
+Enter6 element5
+Enter7 element6
+5 is the first element that repeats
