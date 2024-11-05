@@ -1,0 +1,45 @@
+CODE
+#include<stdio.h>
+int main()
+{
+    int n,i,j,b;
+    printf("Enter the dimension of the array");
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+      {
+          printf("Enter%d element",i+1);
+          scanf("%d",&a[i]);
+      }
+    for(i=0;i<n;i++)
+     for(j=0;j<n-i-1;j++)
+       if(a[j]>a[j+1])
+       {
+           b=a[j];
+           a[j]=a[j+1];
+           a[j+1]=b;
+       }
+    for(i=0;i<n;i+=b)
+     {
+         b=0;
+     for(j=0;j<n;j++)
+      if(a[i]==a[j])
+       b++;
+     printf("Frequency of %d is %d\n",a[i],b);
+     }
+     return 0;
+}
+OUTPUT
+Enter the dimension of the array9
+Enter1 element3
+Enter2 element3
+Enter3 element4
+Enter4 element2
+Enter5 element4
+Enter6 element4
+Enter7 element2
+Enter8 element4
+Enter9 element4
+Frequency of 2 is 2
+Frequency of 3 is 2
+Frequency of 4 is 5
