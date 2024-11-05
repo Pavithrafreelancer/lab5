@@ -1,0 +1,30 @@
+CODE#include<stdio.h>
+int main()
+{
+    int i,n,j;
+    float b;
+    printf("Enter dimension of the array");
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+     {
+         printf("Enter%d element",i+1);
+         scanf("%d",&a[i]);
+     } 
+    for(i=0;i<n;i++)
+     for(j=0;j<n-i-1;j++)
+       if(a[j]>a[j+1])
+       {
+         b=a[j];
+         a[j]=a[j+1];
+         a[j+1]=b;
+OUTPUT
+Enter dimension of the array5
+Enter1 element20
+Enter2 element6
+Enter3 element3
+Enter4 element9
+Enter5 element111
+MIN is 3
+MAX is 111
+AVG is 29.799999
