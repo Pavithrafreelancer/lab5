@@ -1,0 +1,33 @@
+CODE
+#include<stdio.h>
+int main()
+{
+    int n,i,j,b=0,s;
+    printf("Enter the dimension of the array");
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+     {
+         printf("Enter%d element",i+1);
+         scanf("%d",&a[i]);
+     }
+     printf("Enter the sum");
+     scanf("%d",&s);
+     for(i=0;i<n & b==0;i++)
+       for(j=i+1;j<n;j++)
+        if(s==a[i]+a[j])
+          { printf("%d,%d",a[i],a[j]);
+            b++;
+          }
+    return 0;
+}
+OUTPUT
+Enter the dimension of the array6
+Enter1 element3
+Enter2 element12
+Enter3 element4
+Enter4 element1
+Enter5 element6
+Enter6 element9
+Enter the sum13
+12,1
