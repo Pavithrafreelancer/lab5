@@ -1,0 +1,32 @@
+CODE
+#include<stdio.h>
+int main()
+{
+    int i,n,b;
+    printf("Enter dimension of the array");
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+     {
+         printf("Enter%d element",i+1);
+         scanf("%d",&a[i]);
+     } 
+    for(i=0;i<n-1;i+=2)
+       {
+           b=a[i];
+       a[i]=a[i+1];
+       a[i+1]=b;
+       }
+       for(i=0;i<n;i++)
+        printf("%d,",a[i]);
+       return 0;
+}
+OUTPUT
+Enter dimension of the array6
+Enter1 element1
+Enter2 element4
+Enter3 element5
+Enter4 element8
+Enter5 element9
+Enter6 element6
+4,1,8,5,6,9,
