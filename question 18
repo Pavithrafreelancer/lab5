@@ -1,0 +1,44 @@
+CODE
+#include<stdio.h>
+int main()
+{
+    int n,i,j=0,k=0,e=0,o=0;
+    printf("Enter the dimension of the array");
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+      {
+          printf("Enter%d element",i+1);
+          scanf("%d",&a[i]);
+      }
+    for(i=0;i<n;i++)
+      {if(a[i]%2==0)
+       e++;
+      else
+       o++;}
+    int even[e];
+    int odd[o];
+    for(i=0;i<n;i++)
+     { if(a[i]%2==0)
+       {even[j]=a[i];
+        j++;}
+      else
+      { odd[k]=a[i];
+       k++;} 
+     }
+    printf("even");
+    for(i=0;i<e;i++)
+     printf("%d,",even[i]);
+    printf("odd");
+    for(i=0;i<o;i++)
+     printf("%d,",odd[i]);
+     return 0;
+}
+OUTPUT
+Enter the dimension of the array5
+Enter1 element1
+Enter2 element2
+Enter3 element3
+Enter4 element4
+Enter5 element5
+even2,4,odd1,3,5,
