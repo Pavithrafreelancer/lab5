@@ -1,0 +1,51 @@
+CODE
+#include<stdio.h>
+int main()
+{
+    int i,j,x,y;
+    printf("Enter dimensions of the array");
+    scanf("%d%d",&x,&y);
+    int a[x][y],b[x][y],sum[x][y],sub[x][y];
+    printf("Enter a %dx%d 2d array",x,y);
+    for(i=0;i<x;i++)
+     for(j=0;j<y;j++)
+     scanf("%d",&a[i][j]);
+    printf("Enter a %dx%d 2d array",x,y); 
+    for(i=0;i<x;i++)
+     for(j=0;j<y;j++)
+     scanf("%d",&b[i][j]);
+    for(i=0;i<x;i++)
+     for(j=0;j<y;j++)
+     {
+         sum[i][j]=a[i][j]+b[i][j];
+         sub[i][j]=a[i][j]-b[i][j];
+     }
+          for(i=0;i<x;i++)
+      {
+          for(j=0;j<y;j++)
+            printf("%d ",sum[i][j]);
+          printf("\n");
+      }
+     for(i=0;i<x;i++)
+      {
+          for(j=0;j<y;j++)
+            printf("%d ",sub[i][j]);
+          printf("\n");
+      }
+return 0;
+}
+OUTPUT
+Enter dimensions of the array2
+2
+Enter a 2x2 2d array1
+2
+3
+4
+Enter a 2x2 2d array1
+2
+3
+4
+2 4 
+6 8 
+0 0 
+0 0 
