@@ -1,0 +1,24 @@
+CODE
+#include<stdio.h>
+int main()
+{
+    int i,j,n,sum;
+    printf("Enter dimension of the array");
+    scanf("%d",&n);
+    int a[n][n];
+    printf("Enter a %dx%d 2d array",n,n);
+    for(i=0;i<n;i++)
+     for(j=0;j<n;j++)
+     scanf("%d",&a[i][j]);
+    for(i=0;i<n;i++)
+       sum=sum+a[i][i];
+    printf("Sum of right diagonal elements is %d",sum);
+return 0;
+}
+OUTPUT
+Enter dimension of the array2
+Enter a 2x2 2d array1
+2
+3
+4
+Sum of right diagonal elements is 5
