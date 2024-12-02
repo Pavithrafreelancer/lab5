@@ -1,0 +1,26 @@
+CODE
+#include<stdio.h>
+int main()
+{
+   int n,i,c=0,count=0,j;
+   printf("Enter dimension of the array");
+   scanf("%d",&n);
+   int a[n];
+   printf("Enter a sorted a[%d] array",n);
+   for(i=0;i<n;i++)
+     scanf("%d",&a[i]);
+   for(i=0;i<n;i++)
+    {for(j=i-1;j>-1;j--)
+      if(a[j]==a[i])
+        c++;
+     if(a[i]>=0 && c==0)
+       count++;}
+    printf("%d",count);
+   return 0;
+}
+OUTPUT
+Enter dimension of the array3
+Enter a sorted a[3] array0
+0
+0
+1
