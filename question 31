@@ -1,0 +1,32 @@
+CODE
+#include<stdio.h>
+int main()
+{
+   int c=0,i,n,k;
+   printf("Enter dimension(even) of array");
+   scanf("%d",&n);
+   int a[n];
+   printf("Enter array a[%d]",n);
+   for(i=0;i<n;i++)
+     scanf("%d",&a[i]);
+   printf("k=");
+   scanf("%d",&k);
+   for(i=0;i<n-1 && c==0;i+=2)
+    { if((a[i]+a[i+1])%k==0)
+      c=0;
+     else
+      c=1;}
+   if(c==0)
+    printf("True");
+   else
+    printf("False");
+   return 0;
+}
+OUTPUT
+Enter dimension(even) of array4
+Enter array a[4]1
+2
+3
+4
+k=2
+False
