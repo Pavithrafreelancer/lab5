@@ -1,3 +1,4 @@
+CODE
 #include<stdio.h>
 int main()
 {
@@ -20,7 +21,7 @@ int main()
            }
           else
           {
-            if(a[i][j]=0);
+            if(a[i][j]==0);
             else
              c++;
           }
@@ -31,3 +32,10 @@ int main()
            printf("Not identity matrix");
       return 0;
 }
+OUTPUT
+Enter dimension of the array2
+Enter a 2x2 array1
+0
+0
+1
+Identity matrix
