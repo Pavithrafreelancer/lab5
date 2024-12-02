@@ -1,0 +1,29 @@
+CODE
+#include<stdio.h>
+int main()
+{
+   int n,i,x,c=0;
+   printf("Enter dimension of the array");
+   scanf("%d",&n);
+   int a[n];
+   printf("Enter a sorted a[%d] array",n);
+   for(i=0;i<n;i++)
+     scanf("%d",&a[i]);
+   printf("x=");
+   scanf("%d",&x);
+   for(i=0;i<n && c==0;i++)
+     if(a[i]>=x)
+        { printf("Ceiling is %d",a[i]);
+         c++;}
+   return 0;
+}
+OUTPUT
+Enter dimension of the array6
+Enter a sorted a[6] array1
+3
+5
+6
+7
+9
+x=8
+Ceiling is 9
